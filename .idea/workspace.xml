@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65ea0465-0019-4862-bb24-e7df7b06ac07" name="Changes" comment="initial commit, task 2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/tasks/Task3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="65ea0465-0019-4862-bb24-e7df7b06ac07" name="Changes" comment="task 3, singly linked list">
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasks/Task3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasks/Task3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,11 +78,26 @@
       <option name="project" value="LOCAL" />
       <updated>1692647471092</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initial commit, task 2">
+      <created>1692648156011</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1692648156011</updated>
+    </task>
+    <task id="LOCAL-00003" summary="task 3, singly linked list">
+      <created>1692648166993</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1692648166993</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit, task 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit, task 2" />
+    <MESSAGE value="task 3, singly linked list" />
+    <option name="LAST_COMMIT_MESSAGE" value="task 3, singly linked list" />
   </component>
 </project>

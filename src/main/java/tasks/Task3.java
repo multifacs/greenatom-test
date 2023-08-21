@@ -41,6 +41,27 @@ public class Task3 {
             current.next = null;
             return value;
         }
+
+        public int getLength() {
+            if (current == null) {
+                return 0;
+            }
+
+            Node temp = head;
+            int counter = 1;
+            while (temp != current) {
+                temp = temp.next;
+                counter++;
+            }
+            return counter;
+        }
+
+        public int peek() throws Exception {
+            if (current == null) {
+                throw new Exception();
+            }
+            return current.value;
+        }
     }
 
 }
