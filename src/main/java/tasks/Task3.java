@@ -3,7 +3,7 @@ package tasks;
 public class Task3 {
 
     static class SinglyLinkedList {
-        private static class Node {
+        static class Node {
             Node next;
             int value;
 
@@ -13,8 +13,13 @@ public class Task3 {
             }
         }
 
-        Node head;
-        Node current;
+        private Node head;
+        private Node current;
+
+        public SinglyLinkedList() {
+            head = null;
+            current = null;
+        }
 
         public void push(int value) {
             if (head == null) {
@@ -61,6 +66,13 @@ public class Task3 {
                 throw new Exception();
             }
             return current.value;
+        }
+
+        public Node getHead() {
+            return head;
+        }
+        public Node getCurrent() {
+            return current;
         }
     }
 
