@@ -1,25 +1,33 @@
 package tasks;
 
+import tasks.Task3.SinglyLinkedList;
+import tasks.Task3.SinglyLinkedList.Node;
+
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Future;
+
+import static tasks.Task1.Repository.connect;
+import static tasks.Task1.Repository.migrate;
+import static tasks.Task1.selectSecondMaxExp;
+import static tasks.Task2.swap;
+import static tasks.Task3.SinglyLinkedList.printList;
+import static tasks.Task3.SinglyLinkedList.reverse;
 
 public class Main {
     public static void main(String[] args) {
 
         // Task 1
         System.out.println("Task 1");
-        Connection conn = Task1.Repository.connect();
+        Connection conn = connect();
         try {
-            Task1.Repository.migrate(conn);
+            migrate(conn);
         } catch (SQLException e) {
             System.out.println("DB migration error");
             e.printStackTrace();
         }
 
         try {
-            String result = Task1.selectSecondMaxExp(conn);
+            String result = selectSecondMaxExp(conn);
             System.out.println("2nd max experience: " + result);
         } catch (SQLException e) {
             System.out.println("DB SELECT error");
@@ -33,14 +41,14 @@ public class Main {
         var a = new Task2.Wrapper(2);
         var b = new Task2.Wrapper(3);
         System.out.println("Before swapping: a = " + a.value + ", b = " + b.value);
-        Task2.swap(a, b);
+        swap(a, b);
         System.out.println("After swapping: a = " + a.value + ", b = " + b.value);
 
         System.out.println();
 
         // Task 3
         System.out.println("Task 3");
-        Task3.SinglyLinkedList list = new Task3.SinglyLinkedList();
+        SinglyLinkedList list = new SinglyLinkedList();
         list.push(2);
         list.push(5);
         list.push(8);
@@ -51,12 +59,12 @@ public class Main {
             System.out.println("List error");
         }
 
-        Task3.SinglyLinkedList.Node head = list.getHead();
+        Node head = list.getHead();
 
         System.out.print("Before reverse: ");
-        Task3.SinglyLinkedList.printList(head);
-        head = Task3.SinglyLinkedList.reverse(head);
+        printList(head);
+        head = reverse(head);
         System.out.print("After reverse: ");
-        Task3.SinglyLinkedList.printList(head);
+        printList(head);
     }
 }
