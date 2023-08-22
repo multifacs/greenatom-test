@@ -1,7 +1,29 @@
 package tasks;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+
 public class Main {
     public static void main(String[] args) {
+
+        // Task 1
+        System.out.println("Task 1");
+        Connection conn = Task1.Repository.connect();
+        try {
+            Task1.Repository.migrate(conn);
+        } catch (SQLException e) {
+            System.out.println("DB migration error");
+            e.printStackTrace();
+        }
+
+        try {
+            Task1.selectSecondMaxExp(conn);
+        } catch (SQLException e) {
+            System.out.println("DB SELECT error");
+            e.printStackTrace();
+        }
+
+        System.out.println();
 
         // Task 2
         System.out.println("Task 2");
