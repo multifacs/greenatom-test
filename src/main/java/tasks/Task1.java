@@ -39,6 +39,7 @@ public class Task1 {
                     );""",
                     "INSERT INTO employees(surname, experience) VALUES('Иванов', 10);",
                     "INSERT INTO employees(surname, experience) VALUES('Петров', 12);",
+                    "INSERT INTO employees(surname, experience) VALUES('Васин', 14);",
                     "INSERT INTO employees(surname, experience) VALUES('Сидоров', 14);"
             };
 
