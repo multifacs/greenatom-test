@@ -5,10 +5,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class Task1 {
-
-    private static final ExecutorService executor
-            = Executors.newSingleThreadExecutor();
-
     static class Repository {
         public static Connection connect() {
             Connection conn = null;
@@ -57,10 +53,9 @@ public class Task1 {
     public static String selectSecondMaxExp(Connection conn) throws SQLException {
         String sql = """
                 SELECT surname
-                FROM employees e
-                WHERE 2 = (SELECT COUNT (DISTINCT experience)\s
-                           FROM employees p
-                           WHERE e.experience<=p.experience);""";
+                FROM employees
+                ORDER BY experience DESC
+                LIMIT 1 OFFSET 1;""";
         Statement stmt  = conn.createStatement();
         ResultSet rs    = stmt.executeQuery(sql);
 
