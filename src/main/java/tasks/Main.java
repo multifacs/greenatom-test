@@ -29,7 +29,11 @@ public class Main {
 
         try {
             String result = selectSecondMaxExp(conn);
-            System.out.println("2nd max experience: " + result);
+            if (result != null) {
+                System.out.println("2nd max experience: " + result);
+            } else {
+                System.out.println("No 2nd max experience!");
+            }
         } catch (SQLException e) {
             System.out.println("DB SELECT error");
             e.printStackTrace();

@@ -58,7 +58,9 @@ public class Task1 {
         Statement stmt  = conn.createStatement();
         ResultSet rs    = stmt.executeQuery(sql);
 
-        rs.next();
-        return rs.getString("surname");
+        if (rs.next()) {
+            return rs.getString("surname");
+        }
+        return null;
     }
 }
