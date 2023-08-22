@@ -2,6 +2,8 @@ package tasks;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,7 +19,8 @@ public class Main {
         }
 
         try {
-            Task1.selectSecondMaxExp(conn);
+            String result = Task1.selectSecondMaxExp(conn);
+            System.out.println("2nd max experience: " + result);
         } catch (SQLException e) {
             System.out.println("DB SELECT error");
             e.printStackTrace();
