@@ -53,8 +53,9 @@ public class Task1 {
         String sql = """
                 SELECT surname
                 FROM employees
+                WHERE experience < (SELECT MAX(experience) FROM employees)
                 ORDER BY experience DESC
-                LIMIT 1 OFFSET 1;""";
+                LIMIT 1;""";
         Statement stmt  = conn.createStatement();
         ResultSet rs    = stmt.executeQuery(sql);
 
