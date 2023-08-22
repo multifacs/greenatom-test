@@ -18,7 +18,7 @@ public class Main {
     public static void main(String[] args) {
 
         // Task 1
-        System.out.println("Task 1");
+        System.out.println(" -- Task 1 -- ");
         Connection conn = connect();
         try {
             migrate(conn);
@@ -40,16 +40,20 @@ public class Main {
         }
 
         System.out.println();
+        System.out.println();
 
         // Task 2
-        System.out.println("Task 2");
+        System.out.println(" -- Task 2 --");
         System.out.println("Normal check:");
         var a = new Wrapper(2);
         var b = new Wrapper(3);
         System.out.println("Before swapping: a = " + a.value + ", b = " + b.value);
         swap(a, b);
         System.out.println("After swapping: a = " + a.value + ", b = " + b.value);
-        System.out.println("Overflow check:");
+
+        System.out.println();
+
+        System.out.println("Potential overflow check:");
         a = new Wrapper(2147483647);
         b = new Wrapper(1);
         System.out.println("Before swapping: a = " + a.value + ", b = " + b.value);
@@ -57,9 +61,11 @@ public class Main {
         System.out.println("After swapping: a = " + a.value + ", b = " + b.value);
 
         System.out.println();
+        System.out.println();
 
         // Task 3
-        System.out.println("Task 3");
+        System.out.println(" -- Task 3 -- ");
+        System.out.println("List of 3 elems check:");
         SinglyLinkedList list = new SinglyLinkedList();
         list.push(2);
         list.push(5);
@@ -73,6 +79,18 @@ public class Main {
 
         Node head = list.getHead();
 
+        System.out.print("Before reverse: ");
+        printList(head);
+        head = reverse(head);
+        System.out.print("After reverse: ");
+        printList(head);
+
+        System.out.println();
+
+        System.out.println("List of 1 elem check:");
+        list = new SinglyLinkedList();
+        list.push(2);
+        head = list.getHead();
         System.out.print("Before reverse: ");
         printList(head);
         head = reverse(head);
