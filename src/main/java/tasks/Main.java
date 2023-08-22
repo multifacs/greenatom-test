@@ -43,8 +43,15 @@ public class Main {
 
         // Task 2
         System.out.println("Task 2");
+        System.out.println("Normal check:");
         var a = new Wrapper(2);
         var b = new Wrapper(3);
+        System.out.println("Before swapping: a = " + a.value + ", b = " + b.value);
+        swap(a, b);
+        System.out.println("After swapping: a = " + a.value + ", b = " + b.value);
+        System.out.println("Overflow check:");
+        a = new Wrapper(2147483647);
+        b = new Wrapper(1);
         System.out.println("Before swapping: a = " + a.value + ", b = " + b.value);
         swap(a, b);
         System.out.println("After swapping: a = " + a.value + ", b = " + b.value);
