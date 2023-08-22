@@ -5,6 +5,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class Task1 {
+
     static class Repository {
         public static Connection connect() {
             Connection conn = null;
