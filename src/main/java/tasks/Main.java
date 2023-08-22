@@ -9,6 +9,7 @@ import java.sql.SQLException;
 
 import static tasks.Task1.Repository.connect;
 import static tasks.Task1.Repository.migrate;
+import static tasks.Task1.printTable;
 import static tasks.Task1.selectSecondMaxExp;
 import static tasks.Task2.swap;
 import static tasks.Task3.SinglyLinkedList.printList;
@@ -26,6 +27,14 @@ public class Main {
             System.out.println("DB migration error");
             e.printStackTrace();
         }
+
+        try {
+            printTable(conn);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        System.out.println();
 
         try {
             String result = selectSecondMaxExp(conn);

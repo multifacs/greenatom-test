@@ -50,6 +50,18 @@ public class Task1 {
         }
     }
 
+    public static void printTable(Connection conn) throws SQLException {
+        String sql = "SELECT * FROM employees";
+        Statement stmt  = conn.createStatement();
+        ResultSet rs    = stmt.executeQuery(sql);
+
+        System.out.printf("|%2s|%10s|%10s|%n", "id", "surname", "experience");
+        System.out.println("__________________________");
+        while (rs.next()) {
+            System.out.printf("|%2d|%10s|%10d|%n", rs.getInt("id"), rs.getString("surname"), rs.getInt("experience"));
+        }
+    }
+
     public static String selectSecondMaxExp(Connection conn) throws SQLException {
         String sql = """
                 SELECT surname

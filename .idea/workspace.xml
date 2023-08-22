@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65ea0465-0019-4862-bb24-e7df7b06ac07" name="Changes" comment="refactor: task 2 overflow check">
+    <list default="true" id="65ea0465-0019-4862-bb24-e7df7b06ac07" name="Changes" comment="refactor: styling and task 3 1 elem check">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tasks/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasks/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tasks/Task1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tasks/Task1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692715067338</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="refactor: styling and task 3 1 elem check">
+      <option name="closed" value="true" />
+      <created>1692715537700</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1692715537700</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -268,6 +278,7 @@
     <MESSAGE value="feat: null check" />
     <MESSAGE value="fix: different sql query" />
     <MESSAGE value="refactor: task 2 overflow check" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor: task 2 overflow check" />
+    <MESSAGE value="refactor: styling and task 3 1 elem check" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: styling and task 3 1 elem check" />
   </component>
 </project>
