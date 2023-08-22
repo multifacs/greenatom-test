@@ -22,15 +22,16 @@ public class Main {
         System.out.println("Length = " + list.getLength());
         try {
             System.out.println("Last value = " + list.peek());
-
-            Task3.SinglyLinkedList.Node temp = list.getHead();
-            while (temp != null) {
-                System.out.println(temp.value);
-                temp = temp.next;
-            }
         } catch (Exception e) {
             System.out.println("List error");
         }
 
+        Task3.SinglyLinkedList.Node head = list.getHead();
+
+        System.out.print("Before reverse: ");
+        Task3.SinglyLinkedList.printList(head);
+        head = Task3.SinglyLinkedList.reverse(head);
+        System.out.print("After reverse: ");
+        Task3.SinglyLinkedList.printList(head);
     }
 }

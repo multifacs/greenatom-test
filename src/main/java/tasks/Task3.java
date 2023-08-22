@@ -74,6 +74,31 @@ public class Task3 {
         public Node getCurrent() {
             return current;
         }
+
+        public static Node reverse(Node head) {
+            Node current = head;
+            Node next = null;
+            Node prev = null;
+
+            while (current != null) {
+                next = current.next;
+                current.next = prev;
+                prev = current;
+                current = next;
+            }
+
+            head = prev;
+            return head;
+        }
+
+        public static void printList(Node node) {
+            Node current = node;
+            while (current != null) {
+                System.out.print(current.value + " ");
+                current = current.next;
+            }
+            System.out.println();
+        }
     }
 
 }
